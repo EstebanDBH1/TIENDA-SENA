@@ -1,0 +1,113 @@
+<?php
+// confirmar sesion
+session_start();
+
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.html');
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offbeat - Admin.</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header container">
+      <nav class="nav">
+        <a href="/" class="nav-link name-site">Offbeat.</a>
+
+        <a href="login.html">Login</a>
+
+        <ul class="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-admin container">
+      <p class="text-small-hero"><span>Admin</span> - Rol</p>
+      <h1 class="text-hero-home text-home">
+        <div class="line">
+          <span>ADMINISTRA</span>
+          <span>TODOS</span>
+        </div>
+
+        <div class="line">
+          <span>TUS</span>
+          <span>PRODUCTOS</span>
+          <span>EN</span>
+        </div>
+        <div class="line">
+          <span>stock</span>
+          <span>desde</span>
+          <span>aquí.</span>
+        </div>
+      </h1>
+    </section>
+
+    <section class="co-products-admin container">
+      <header class="header-list-product-admin">
+        <h2 class="">Lista de productos subidos.</h2>
+        <button class="btn-add-product">Agregar un producto.</button>
+      </header>
+      <hr />
+
+      <div>
+        <ul class="list-product-admin">
+          <li class="card-product-admin">
+            <div class="wrapper-card-product-admin">
+              <figure>
+                <img src="assets/uploads/image-4.webp" alt="" />
+                <div class="btn-actions">
+                  <button class="btn-delete">Eliminar</button>
+                </div>
+              </figure>
+            </div>
+            <figcaption class="info-product-admin">
+              <h2 class="name-product">Nike Dunk Lowe(M)</h2>
+              <p class="price">34.0000</p>
+            </figcaption>
+          </li>
+          <li class="card-product-admin">
+            <div class="wrapper-card-product-admin">
+              <figure>
+                <img src="assets/uploads/image-1.webp" alt="" />
+                <div class="btn-actions">
+                  <button class="btn-delete">Eliminar</button>
+                </div>
+              </figure>
+            </div>
+            <figcaption class="info-product-admin">
+              <h2 class="name-product">Nike Dunk Lowe(M)</h2>
+              <p class="price">34.0000</p>
+            </figcaption>
+          </li>
+
+          <li class="card-product-admin">
+            <div class="wrapper-card-product-admin">
+              <figure>
+                <img src="assets/uploads/image-10.webp" alt="" />
+                <div class="btn-actions">
+                  <button class="btn-delete">Eliminar</button>
+                </div>
+              </figure>
+            </div>
+            <figcaption class="info-product-admin">
+              <h2 class="name-product">Nike Dunk Lowe(M)</h2>
+              <p class="price">34.0000</p>
+            </figcaption>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--scripts-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
